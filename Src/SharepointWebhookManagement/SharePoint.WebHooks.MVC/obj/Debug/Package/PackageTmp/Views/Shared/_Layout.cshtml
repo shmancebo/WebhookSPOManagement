@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="cabecera">
+        <img style="height:60px;float:left;margin-left:50px;margin-top:30px;" src="~/Content/Imagenes/logo_encamina_720-x-356-white.png" />
+        <center>
+            <h2 style="padding-top:30px;padding-left:20px;font-size:48px;">Webhook Management</h2>
+        </center>
+        <img style="float:right;margin-top:-90px" src="~/Content/Imagenes/rodolfo.png" />
+    </div>
+    <div class="container body-content containerHeight">
+        @RenderBody()
+    </div>
+    <footer class="pie">
+        <p style="color:white">&copy; @DateTime.Now.Year - Gestor de suscripciones</p>
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/ScriptHome")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

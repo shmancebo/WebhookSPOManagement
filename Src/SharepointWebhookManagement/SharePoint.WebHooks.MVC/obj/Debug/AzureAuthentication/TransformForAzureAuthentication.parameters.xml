@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="AD_ClientID" description="AD Client Application ID" defaultValue="3a772aeb-ed21-49b2-983c-69d19bda84b9" tags="AD_ClientAPPID">
+    <parameterEntry kind="XmlFile" scope="C:\\TFS\\SPS\\SharepointWebhookManagement\\SharePoint\.WebHooks\.MVC\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/appSettings/add[@key='ida:ClientId']/@value" />
+  </parameter>
+</parameters>

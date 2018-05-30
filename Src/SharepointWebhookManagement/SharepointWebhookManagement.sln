@@ -1,0 +1,87 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 - Presentation", "01 - Presentation", "{4A9E8367-A097-47D9-B807-8FA071A76341}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 - Services", "02 - Services", "{6C2093F9-BC3B-4E03-969C-0C029085859B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03 - Domain", "03 - Domain", "{42B68BDD-54C6-427C-AB09-07D9E4A05FE7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04 - Common", "04 - Common", "{3AAFD028-15A1-436A-A0B2-C554B1751709}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharePoint.WebHooks.MVC", "SharePoint.WebHooks.MVC\SharePoint.WebHooks.MVC.csproj", "{FA2E5494-0B1C-4C40-866A-A7A0180B0F72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sharepoint.Webhooks.Domain", "Sharepoint.Webhooks.Domain\Sharepoint.Webhooks.Domain.csproj", "{7E9D3187-596D-43B8-8BF0-59882A796ABD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharePoint.WebHooks.Common", "SharePoint.WebHooks.Common\SharePoint.WebHooks.Common.csproj", "{F7BF4B65-F659-4B33-A5E0-F6CA1568A361}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharepointWebHookManagement.Api", "SharepointWebHookManagement.Api\SharepointWebHookManagement.Api.csproj", "{9D5805CA-BFC6-4159-84C7-610562A4D547}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharepointWebhook.Client", "SharepointWebhook.Client\SharepointWebhook.Client.csproj", "{C7083C4A-A0A2-4DAE-A4E4-362EB699A972}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA2E5494-0B1C-4C40-866A-A7A0180B0F72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA2E5494-0B1C-4C40-866A-A7A0180B0F72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA2E5494-0B1C-4C40-866A-A7A0180B0F72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA2E5494-0B1C-4C40-866A-A7A0180B0F72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E9D3187-596D-43B8-8BF0-59882A796ABD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E9D3187-596D-43B8-8BF0-59882A796ABD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E9D3187-596D-43B8-8BF0-59882A796ABD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E9D3187-596D-43B8-8BF0-59882A796ABD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7BF4B65-F659-4B33-A5E0-F6CA1568A361}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7BF4B65-F659-4B33-A5E0-F6CA1568A361}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7BF4B65-F659-4B33-A5E0-F6CA1568A361}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7BF4B65-F659-4B33-A5E0-F6CA1568A361}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D5805CA-BFC6-4159-84C7-610562A4D547}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D5805CA-BFC6-4159-84C7-610562A4D547}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D5805CA-BFC6-4159-84C7-610562A4D547}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D5805CA-BFC6-4159-84C7-610562A4D547}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7083C4A-A0A2-4DAE-A4E4-362EB699A972}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7083C4A-A0A2-4DAE-A4E4-362EB699A972}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7083C4A-A0A2-4DAE-A4E4-362EB699A972}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7083C4A-A0A2-4DAE-A4E4-362EB699A972}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FA2E5494-0B1C-4C40-866A-A7A0180B0F72} = {4A9E8367-A097-47D9-B807-8FA071A76341}
+		{7E9D3187-596D-43B8-8BF0-59882A796ABD} = {42B68BDD-54C6-427C-AB09-07D9E4A05FE7}
+		{F7BF4B65-F659-4B33-A5E0-F6CA1568A361} = {3AAFD028-15A1-436A-A0B2-C554B1751709}
+		{9D5805CA-BFC6-4159-84C7-610562A4D547} = {6C2093F9-BC3B-4E03-969C-0C029085859B}
+		{C7083C4A-A0A2-4DAE-A4E4-362EB699A972} = {6C2093F9-BC3B-4E03-969C-0C029085859B}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.encamina.com/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SharePoint.WebHooks.MVC\\SharePoint.WebHooks.MVC.csproj
+		SccProjectTopLevelParentUniqueName1 = SharepointWebhookManagement.sln
+		SccProjectName1 = SharePoint.WebHooks.MVC
+		SccLocalPath1 = SharePoint.WebHooks.MVC
+		SccProjectUniqueName2 = Sharepoint.Webhooks.Domain\\Sharepoint.Webhooks.Domain.csproj
+		SccProjectTopLevelParentUniqueName2 = SharepointWebhookManagement.sln
+		SccProjectName2 = Sharepoint.Webhooks.Domain
+		SccLocalPath2 = Sharepoint.Webhooks.Domain
+		SccProjectUniqueName3 = SharePoint.WebHooks.Common\\SharePoint.WebHooks.Common.csproj
+		SccProjectTopLevelParentUniqueName3 = SharepointWebhookManagement.sln
+		SccProjectName3 = SharePoint.WebHooks.Common
+		SccLocalPath3 = SharePoint.WebHooks.Common
+		SccProjectUniqueName4 = SharepointWebHookManagement.Api\\SharepointWebHookManagement.Api.csproj
+		SccProjectTopLevelParentUniqueName4 = SharepointWebhookManagement.sln
+		SccProjectName4 = SharepointWebHookManagement.Api
+		SccLocalPath4 = SharepointWebHookManagement.Api
+		SccProjectUniqueName5 = SharepointWebhook.Client\\SharepointWebhook.Client.csproj
+		SccProjectTopLevelParentUniqueName5 = SharepointWebhookManagement.sln
+		SccProjectName5 = SharepointWebhook.Client
+		SccLocalPath5 = SharepointWebhook.Client
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="SharePointWebHooksWeb" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\TFS\\SPS\\SharepointWebhookManagement\\SharePoint\.WebHooks\.MVC\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\TFS\\SPS\\SharepointWebhookManagement\\SharePoint\.WebHooks\.MVC\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="AD_APPIDUri" description="" value="" tags="" />
+  <parameter name="AD_MetadataUrl" description="" value="https://login.windows.net/ckm.onmicrosoft.com/FederationMetadata/2007-06/FederationMetadata.xml" tags="" />
+  <parameter name="AD_RealmAppSetting" description="" value="" tags="" />
+  <parameter name="AD_AudienceUriAppSetting" description="" value="" tags="" />
+  <parameter name="AD_Domain" description="" value="ckm.onmicrosoft.com" tags="" />
+</parameters>

@@ -1,0 +1,93 @@
+﻿@model SharePoint.WebHooks.MVC.Models.SharePointSiteModel
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@using (Html.BeginForm("Create", "Home", FormMethod.Post))
+{
+    <div class="row infoSite">
+        <div class="col-md-10 rowData">
+            <span class="titleh4">Gestion de webhooks para el sitio</span>
+        </div>
+        <div class="col-md-10 rowDataTitle">
+            <a target="_blank" href="@Model.SharePointSite">@Model.SharePointSite</a>
+        </div>
+
+        <div class="col-md-10 rowData">
+            <span class="titleh4">Añada un nuevo webhook</span>
+        </div>
+        <div class="col-md-10 rowDataTitle">
+
+            <div class="col-md-2">
+                Seleccione una lista
+            </div>
+            <div class="col-md-6">
+                @Html.DropDownListFor(m => m.SelectedSharePointList, new SelectList(Model.Lists, "Id", "Title", Model.SelectedSharePointList), new { @id = "ListDropDown", @class = "field" })
+            </div>
+        </div>
+        <div class="col-md-10 rowDataTitle">
+            <div class="col-md-2">
+                Url Notificación
+            </div>
+            <div class="col-md-6" style="margin-bottom:40px;">
+                <input type="text" class="fieldTxt" id="notificationUrlVal" />
+            </div>
+        </div>
+        <div class="col-md-6 rowDataTitle" style="text-align:center;">
+            <input class="btn btn-success btnCreate" style="margin:auto;" type="button" value="Crear" id="btnCreate" />
+        </div>
+    </div>
+    <div class="row" style="margin-top:40px;">
+        <table cellpadding="3" class="tableSuscriptions">
+            <thead>
+                <tr>
+                    <th class="td10">Acciones</th>
+                    <th sclass="td25">Identificador</th>
+                    <th class="td20">Lista Sharepoint</th>
+                    <th class="td35">Cliente webhook</th>
+                    <th class="td10">Valido hasta</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.WebHooks.Count() == 0)
+                {
+                    <tr>
+                        <td colspan="5">No existe ninguna susbripción en este site :(</td>
+                    </tr>
+                }
+                else
+                {
+                    foreach (var webHook in Model.WebHooks)
+                    {
+                        var list = Model.Lists.Where(f => f.Id == new Guid(webHook.Resource)).FirstOrDefault();
+                        <tr>
+                            <td style="padding-left:10px;">
+                                <input class="btn btn-danger" style="margin:auto;" type="button" value="X" id="btnDelete" />
+                                @Html.Hidden("hiddenId", webHook.Id)
+                                @Html.Hidden("hiddenResource", webHook.Resource)
+                                @*@Html.ActionLink("X", "Delete", "Home", new RouteValueDictionary(new { id = webHook.Id, listId = webHook.Resource }),new { @class = "btn btn-danger" })*@
+                            </td>
+                            <td>@webHook.Id</td>
+                            <td> @list.Title</td>
+                            <td style="padding-right:20px;">@webHook.NotificationUrl</td>
+                            <td>@webHook.ExpirationDateTime.ToShortDateString()</td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+        <div id="myModal" class="modal" >
+            <div class="modal-content" id="popup">
+                <div id="loading" class="loadingGif">
+                    @Html.Partial("_WorkingOnIt")
+                </div>
+                <div id="result" class="resultContent">
+                    <span class="msgResult" id="msgOperation"></span>
+                    <input type="button" class="btn btn-info btnCreate" onclick="WebhookWeb.HomeScripts.ReoladPage()" value="Cerrar" />
+                </div>
+            </div>
+        </div>
+}
+
